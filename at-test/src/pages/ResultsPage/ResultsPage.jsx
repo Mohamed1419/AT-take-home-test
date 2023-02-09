@@ -8,7 +8,8 @@ function ResultsPage() {
     console.log(params.query);
 
     useEffect(() => {
-      const getSamples = async () => {
+      setResults();
+      const getResults = async () => {
       try {
         const res = await fetch(`https://global.atdtravel.com/api/products?geo=en&title=${params.query}`);
         const resultsData = await res.json();
@@ -20,13 +21,28 @@ function ResultsPage() {
       }
     };
 
-    getSamples();
+    getResults();
   }, [params.query]);
   //whenever there is a change in the params ie a new search has been made, the useEffect block is called again to fetch based on the new query
 
   return (
         <>
-      {results && Object.keys(results).length > 1 ? results.data.map((data)=>(<h2 key={data.id}>{data.title}</h2>)) : results && Object.keys(results).length === 1 ? <h2>{results.err_desc}</h2> : <h2>Loading...</h2>}
+
+         <table>
+          <tr>
+          <th>Image</th>
+          <th>Title</th>
+          <th>Destination</th>
+        </tr>
+      {results && Object.keys(results).length > 1 ? results.data.map((data)=>(
+       
+        <tr>
+            <td><img alt={data.title} src={data.img_sml} /></td>
+            <td>{data.title}</td>
+            <td>{data.dest}</td>
+          </tr>
+        )) : results && Object.keys(results).length === 1 ? <h2>{results.err_desc}</h2> : <h2>Loading...</h2>}
+        </table>
         </>
   )
 }

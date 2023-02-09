@@ -21,7 +21,7 @@ function SearchBar() {
       <form onSubmit={() => onSearch(value)}>
         <label>
           Search for a destination:
-        <input type='text' value={value} placeholder="Search"   onChange={onChange}></input>
+        <input type='text' value={value} placeholder="Search" onChange={onChange}></input>
         </label>
         <Link to={`/results/${value}`}><input type="submit" value="Submit" /></Link>
       </form>
