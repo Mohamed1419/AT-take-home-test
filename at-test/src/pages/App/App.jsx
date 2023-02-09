@@ -3,7 +3,7 @@ import './App.css'
 import {Routes, Route, Navigate} from 'react-router-dom'
 import ResultsPage from '../ResultsPage/ResultsPage'
 import HomePage from '../HomePage/HomePage'
-import SearchBar from '../../components/SearchBar/SearchBar'
+import SearchBar from '../../components/SearchBar/SearchBar.jsx'
 
 function App() {
   return (
