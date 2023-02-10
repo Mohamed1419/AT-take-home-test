@@ -4,13 +4,6 @@ import './SearchBar.css'
 
 function SearchBar() {
   const [value, setValue] = useState('')
-  const [results, setResults] = useState([]);
-
-
-  const onSearch = (searchTerm) => {
-    setResults([])
-    setResults(searchTerm)
-  }
 
   function onChange(e) {
     setValue(e.target.value)
@@ -18,12 +11,13 @@ function SearchBar() {
 
   return (
     <div>
-      <form onSubmit={() => onSearch(value)}>
+      <form>
         <label>
           Search for a destination:
         <input type='text' value={value} placeholder="Search" onChange={onChange}></input>
         </label>
-        <Link to={`/results/${value}`}><input type="submit" value="Submit" /></Link>
+        {/* Here is where the search query is pushed into the params of the results page */}
+        <Link to={`/results/${value}`}><input type="submit" value="Submit" /></Link> 
       </form>
     </div>
   )

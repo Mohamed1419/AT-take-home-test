@@ -13,7 +13,8 @@ function App() {
       <Routes>
         <Route exact path="*" element={<Navigate to="/" />} />
         <Route exact path="/" element={<HomePage />} />
-        <Route exact path="/results/:query" element={<ResultsPage />} />
+        {/*here we are passing the query data from the searchbar component into the params */}
+        <Route exact path="/results/:query" element={<ResultsPage />} /> 
       </Routes>
     </div>
   )
