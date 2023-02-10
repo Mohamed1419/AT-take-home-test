@@ -65,7 +65,7 @@ function HomePage() {
 
       </table>
     {
-      samples && samples.meta.total_count >10 ?  <button onClick={loadMore}>Load More</button> : null
+      samples && samples.meta.total_count >10 && samplesData.length < samples.meta.total_count ?  <button onClick={loadMore}>Load More</button> : null
     }
       
       

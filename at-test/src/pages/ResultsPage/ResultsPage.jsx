@@ -61,7 +61,7 @@ function ResultsPage() {
         )) : results && Object.keys(results).length === 1 ? <tr>{results.err_desc}</tr> : <tr>Loading...</tr>}
         </table>
       {
-      results && Object.keys(results).length > 1  &&results.meta.total_count >10 ?  <button onClick={loadMore}>Load More</button> : null
+      results && Object.keys(results).length > 1  && results.meta.total_count >10 && resultsData.length < results.meta.total_count ?  <button onClick={loadMore}>Load More</button> : null
     }
         </>
   )
