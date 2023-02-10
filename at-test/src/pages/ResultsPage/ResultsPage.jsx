@@ -67,7 +67,7 @@ function ResultsPage() {
       {
         // third condition ensures load more button only shows when it is needed as there are more than 10 results
         // fourth condition is needed so when on the last batch of results for any given query, load more button does not show again
-      results && Object.keys(results).length > 1  && results.meta.total_count >10 && resultsData.length < results.meta.total_count ?  <button onClick={loadMore}>Load More</button> : null
+      results && Object.keys(results).length > 1  && results.meta.total_count >10 && resultsData.length < results.meta.total_count ?  <button className='load-more-btn' onClick={loadMore}>Load More</button> : null
     }
         </>
   )

@@ -61,7 +61,7 @@ function HomePage() {
     {
         // second condition ensures load more button only shows when it is needed as there are more than 10 results
         // third condition is needed so when on the last batch of results for any given query, load more button does not show again
-      samples && samples.meta.total_count >10 && samplesData.length < samples.meta.total_count ?  <button onClick={loadMore}>Load More</button> : null
+      samples && samples.meta.total_count >10 && samplesData.length < samples.meta.total_count ?  <button className='load-more-btn' onClick={loadMore}>Load More</button> : null
     }
       
       
