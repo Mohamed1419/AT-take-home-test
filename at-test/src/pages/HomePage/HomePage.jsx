@@ -4,8 +4,8 @@ import './HomePage.css'
 function HomePage() {
     let [samples, setSamples] = useState()
     let [samplesData, setSamplesData] = useState([])
-    let [pageCount, setPageCount] = useState()
-    let [resultsCount, setResultsCount] = useState()
+    // let [pageCount, setPageCount] = useState()
+    // let [resultsCount, setResultsCount] = useState()
     let [offsetCount, setOffsetCount] = useState(0)
 
     useEffect(() => {
@@ -20,8 +20,8 @@ function HomePage() {
         // console.log(resultsData);
         setSamples(resultsData)
         setSamplesData(resultsData.data)
-        setResultsCount(resultsData.meta.total_count)
-        setPageCount(Math.ceil(resultsCount/10))
+        // setResultsCount(resultsData.meta.total_count)
+        // setPageCount(Math.ceil(resultsCount/10))
         // console.log(samples);
       } catch (error) {
         console.log(error);
