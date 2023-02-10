@@ -17,14 +17,14 @@ Front End:
 Version Control:
 - Git
 
-## Planning
-Since I was given a specific set of instructions and specific deliverables that I needed to meet, along with a general wireframe, I decided that I should start by thinking about which technologies I could employ to deliver an MVP. I felt comfortable with React so thats what I proceeded with. 
+## Planning, How I Would Approach Building the Product
+Since I was given a specific set of instructions and specific deliverables that I needed to meet, along with a general wireframe, I decided that I should start by thinking about which technologies I could employ to deliver an MVP. I felt comfortable with React so that's what I proceeded with. 
 I then planned out how I should manage the stages of this project as it was relatively small however given the timeframe, I needed to work with haste. Hence the first thing I did was break everything down into smaller chunks. 
-- My first thoughts was about how I would structure the app itself. Thinking about what components I would need. What pages would be appropriate to use here. 
-- I was then going to focus on successfully fetching from the API and console.log the response.
-- Once I successfully managed to do this I would think about how I was going to display the data. 
-- Once that was done, I thought it would be appropriate to think about how the search functionality would work in this project and how it would work alongside the fetch. 
-- Following that, I then thought about pagination and dealing with the data from the API. 
+- My first thoughts was about how I would structure the app itself. Thinking about what components I would need. What pages would be appropriate to use here. What kind of hooks would I need to utilize. 
+- I was then going to focus on successfully fetching from the API and examine the structure of the response as this is very important for this app. There are multiple ways someone can approach getting a response from an API, but I was going to use Fetch as I had used this before and was comfortable with it. Another example one could think about using to retrieve data from an API is Axios. 
+- Once that was done, I thought it would be appropriate to think about how the search functionality would work in this project and how it would work alongside the API. After close inspection it seemed more appropriate to continuously call the API for a response rather than calling it one time and then manipulating the data. I made use of params, useEffect and Link from the React Router DOM to pass through any search query and take the user to a results page. Here, the params were extracted and used to retrieve data from the API that matched the query. 
+- Once I successfully managed to create search bar functionality and study the structure of the data, I would think about how I was going to display the actual data. I took direct inspiration from the wireframe provided and used a table. One would also need to be familiar with array methods in order to use the API and display the data accordingly. Array.map method is quite vital to know here. It is also important to know how to utilize the ternary operator for fleshing out the logic for the app. 
+- Following that, I then thought about pagination and the logic of how it would work. After studying the API, I came to know of metadata that was available that I could leverage for this specific task. This greatly helped with building the pagination logic. 
 
 Once everything was working then I would focus on styling if there was time. 
 
